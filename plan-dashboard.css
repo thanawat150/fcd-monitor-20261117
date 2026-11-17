@@ -1,0 +1,71 @@
+#planting-plan { gap: 1.25rem; display: flex; flex-direction: column; min-width: 0; }
+.dashboard-page { display:flex; flex-direction:column; gap:1.25rem; min-width:0; }
+.canopy-map-surface { height:100%; width:100%; border-radius:.65rem; }
+.filtered-plot-map { height:560px; width:100%; min-width:0; }
+.fcd-map:has(.filtered-plot-map) { display:flex; flex-direction:column; }
+.edition-table-scroll { overflow:auto; max-width:100%; }
+.edition-audit table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+.edition-audit :is(td,th) { padding:.6rem; text-align:right; white-space:nowrap; }
+.edition-audit :is(td,th):first-child { text-align:left; }
+.edition-audit details { font-size:.82rem; }
+.edition-audit li { margin-bottom:.5rem; }
+.edition-audit button { padding:.55rem .8rem; font:inherit; border:1px solid #baccc0; border-radius:.5rem; background:white; color:#123c32; cursor:pointer; }
+.fcd .edition-audit td { white-space:normal; }
+#by-plot .fcd-chart { min-height:8rem; }
+.dashboard-nav { flex-wrap:wrap; }
+.dashboard-nav a[aria-current="page"] { background:#123c32; color:#fff; }
+.plan-head { display:flex; justify-content:space-between; gap:1rem; align-items:start; }
+.plan-head h2 { font-size:clamp(1.4rem,3vw,2rem); margin:0; color:#123c32; }
+.plan-head p { margin:.35rem 0 0; color:var(--color-fg-muted); }
+.plan-tag { display:inline-block; background:#e2eddb; padding:.4rem .7rem; border-radius:2rem; font-size:.8rem; white-space:nowrap; }
+.plan-filters { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)) auto; gap:.75rem; align-items:end; }
+.plan-filters label,.plan-density { display:flex; flex-direction:column; gap:.3rem; font-weight:600; font-size:.8rem; }
+#planting-plan :is(select,input,button) { font:inherit; }
+#planting-plan :is(select,input) { min-height:42px; border:1px solid #cbd8ce; border-radius:.55rem; padding:.5rem; max-width:100%; min-width:0; color:#182d26; background:white; }
+#planting-plan button,.plan-link { border:1px solid #cbd8ce; border-radius:.5rem; padding:.55rem .75rem; background:white; color:#123c32; cursor:pointer; text-decoration:none; }
+#planting-plan button:hover,.plan-link:hover { background:#edf4e8; }
+#planting-plan :is(button,a,input,select):focus-visible { outline:3px solid #a86b09; outline-offset:2px; }
+.plan-note { background:#fff8e7; border-left:4px solid #d59a17; border-radius:.5rem; padding:.9rem 1rem; margin:0; font-size:.83rem; overflow-wrap:anywhere; }
+.plan-note p { margin:.2rem 0; }
+.plan-density { flex-direction:row; align-items:center; flex-wrap:wrap; }
+.plan-density input { width:6rem; }
+.plan-kpis { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
+.fcd dl.plan-kpi { display:block; margin:0; background:white; border:1px solid #dbe5de; border-top:4px solid #123c32; border-radius:.7rem; padding:1rem; min-width:0; }
+#planting-plan .plan-kpi.red { border-top-color:#d6452f; }#planting-plan .plan-kpi.yellow { border-top-color:#dfae1c; }
+#planting-plan .plan-kpi.green { border-top-color:#3d9a58; }
+.plan-kpi dt { font-size:.8rem; color:#526760; }.plan-kpi dd { margin:.4rem 0 0; font-size:clamp(1.4rem,2.8vw,2rem); font-weight:700; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+.plan-kpi dd small { font-size:.75rem; font-weight:400; }
+.plan-row { display:flex; flex-wrap:wrap; gap:.8rem; align-items:center; justify-content:space-between; }
+.plan-panel-title { margin:0; font-size:1.1rem; }
+.plan-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.plan-chart { display:flex; flex-direction:column; gap:.65rem; }
+#planting-plan .plan-bar { display:grid; grid-template-columns:minmax(5.5rem,1fr) 2fr 5.8rem; gap:.65rem; border:0; padding:.2rem; text-align:left; width:100%; align-items:center; font-size:.8rem; }
+.plan-bar-label { overflow-wrap:anywhere; }.plan-bar-track { display:flex; height:23px; background:#edf2e9; border-radius:4px; overflow:hidden; }.plan-bar-track i { height:100%; display:block; }.plan-bar-total { text-align:right; font-variant-numeric:tabular-nums; }
+.plan-review-strip { display:flex; height:28px; border-radius:5px; overflow:hidden; background:#edf2e9; }
+.plan-review-items { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem; margin-top:.5rem; font-size:.8rem; }
+.plan-review-items p { margin:0; }.plan-key { display:inline-block; width:16px; height:12px; margin-right:.4rem; border:2px solid; vertical-align:middle; }
+.plan-map-navigation { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; margin:.6rem 0; }
+.plan-map-navigation p { margin:0; font-weight:600; overflow-wrap:anywhere; }
+.plan-map-navigation button { flex-shrink:0; }
+.plan-map-buttons { display:flex; gap:.5rem; }
+.plan-map { height:560px; min-width:0; border-radius:.65rem; background:#dce7db; z-index:0; }
+.plan-map .leaflet-control-layers { max-width:calc(100vw - 6rem); font-family:Tahoma, sans-serif; }
+.plan-map .leaflet-container { font:inherit; }
+.plan-legend { display:flex; flex-wrap:wrap; gap:.5rem 1rem; font-size:.78rem; }
+.plan-popup { font:12px/1.6 Tahoma,sans-serif; overflow-wrap:anywhere; }
+.plan-popup h3 { margin:0 0 .3rem; }.plan-popup dl { display:grid; grid-template-columns:auto 1fr; gap:.15rem .5rem; margin:0; max-width:100%; }.plan-popup dt { font-weight:600; }.plan-popup dd { margin:0; min-width:0; }
+.plan-popup img { max-width:100%; height:auto; margin:.4rem 0; }.plan-popup .plan-row { gap:.4rem; }.plan-popup a { color:#145f49; }
+.plan-table-wrap { max-height:32rem; overflow:auto; max-width:100%; border:1px solid #dbe5de; border-radius:.5rem; }
+#planting-plan table { width:100%; border-collapse:collapse; font-size:.78rem; font-variant-numeric:tabular-nums; }
+#planting-plan th { background:#edf3e9; padding:.5rem; position:sticky; top:0; z-index:1; text-align:left; }
+#planting-plan td { padding:.65rem .5rem; border-bottom:1px solid #e2e9e0; white-space:normal; overflow-wrap:anywhere; }
+#planting-plan .plan-num { text-align:right; white-space:nowrap; }
+#planting-plan th button { border:0; background:none; padding:0; text-align:inherit; font-weight:600; }
+.plan-plot-row { cursor:pointer; }.plan-plot-row:hover { background:#f0f6e9; }
+.plan-search { width:20rem; }.plan-empty { padding:1rem; color:#526760; }
+.plan-explainer ul { padding-left:1.2rem; margin:0; display:flex; flex-direction:column; gap:.4rem; font-size:.83rem; }
+.plan-static { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.75rem; }.plan-static a { color:#123c32; text-decoration:none; border:1px solid #dbe5de; border-radius:.6rem; overflow:hidden; font-size:.8rem; }.plan-static img { display:block; width:100%; height:130px; object-fit:contain; background:#edf3e9; }.plan-static span { display:block; padding:.5rem; }
+@media(max-width:800px) { .plan-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }.plan-grid { grid-template-columns:1fr; }.plan-static { grid-template-columns:repeat(2,minmax(0,1fr)); }.plan-head { flex-direction:column; }.plan-map { height:450px; } }
+@media(max-width:450px) { .plan-kpis { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; }.plan-kpi { padding:.7rem; }.plan-review-items { grid-template-columns:1fr; }.plan-map { height:410px; }.plan-chart .plan-bar { grid-template-columns:5.5rem 1fr 4.6rem!important; gap:.35rem!important; }.plan-map .leaflet-control-attribution { font-size:9px; }.plan-table-wrap { font-size:.75rem; }.plan-tag { white-space:normal; } }
+@media(max-width:450px) { .filtered-plot-map { height:410px; } .plan-kpis { grid-template-columns:1fr; } .edition-audit :is(td,th) { padding:.45rem .25rem; font-size:.75rem; } .plan-chart .plan-bar { grid-template-columns:5.5rem 1fr 5.5rem!important; } }
+@media print { body[data-plan-active] .dashboard-hero, .dashboard-nav, .plan-filters, .plan-map { display:none!important; }.plan-table-wrap { max-height:none; overflow:visible; }.plan-static { grid-template-columns:1fr; }.plan-static img { height:auto; }.plan-static a { break-inside:avoid; } }
